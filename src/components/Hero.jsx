@@ -1,6 +1,9 @@
 import React from 'react'
 
-export default function Hero() {
+export default function Hero(props) {
+
+  const { handleToggleWorkoutPage, handleToggleHero } = props
+
   return (
     <div  className="min-h-screen flex flex-col gap-10 
     items-center justify-center text-center">
@@ -21,7 +24,10 @@ export default function Hero() {
 
       <button className="px-8 py-4 rounded-medium">
 
-        <p>Accept & Begin</p>
+        <button onClick={() => {
+          handleToggleWorkoutPage()
+          handleToggleHero()
+        }}>Accept & Begin</button>
       </button>
     </div>
   )
